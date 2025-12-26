@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Generated output files (parsed/mapped JSON)
+# src/parser/parsed_outputs/
+# src/mapping/mapped_outputs/
+# src/mapping/new_generated_keys/
+
+# OS system files
+.DS_Store
+Thumbs.db
