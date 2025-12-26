@@ -49,7 +49,7 @@ async def rabbit_worker():
             if message:
                 async with message.process(requeue=True):
                     raw_body = message.body.decode()
-                    logger.info(f"📩 Processing message (length: {len(raw_body)})...")
+                    logger.info(f"Processing message (length: {len(raw_body)})...")
                     
                     try:
                         msg = json.loads(raw_body)
@@ -71,7 +71,7 @@ async def rabbit_worker():
                     result = get_imo(mail_body_str)
                     
                     if result is None or result == (None, None):
-                        logger.warning(f"⚠️ Vessel not found in DB for tenant {tenant}. Using standards.")
+                        logger.warning(f"Vessel not found in DB for tenant {tenant}. Using standards.")
                         vessel_imo = None
                         vessel_name = "Unknown"
                     else:
@@ -98,20 +98,20 @@ async def rabbit_worker():
 
                     if payload:
                         report_id = save_noon_parsing_report(payload)
-                        logger.info(f"✅ Report saved successfully. ID: {report_id}")
+                        logger.info(f"Report saved successfully. ID: {report_id}")
                     
                     await asyncio.sleep(1) 
 
-                logger.info("✅ Message ACKed.")
+                logger.info("Message ACKed.")
                 limit_manager.increment()
             else:
                 # Idle wait if queue is empty
                 await asyncio.sleep(5)
 
         except asyncio.CancelledError:
-            logger.info("🛑 Worker task cancelled.")
+            logger.info("Worker task cancelled.")
             break
         except Exception as e:
-            logger.error(f"❌ Worker loop error: {e}")
+            logger.error(f"Worker loop error: {e}")
             current_cfg = None # Reset to trigger full recovery
             await asyncio.sleep(10)

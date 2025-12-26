@@ -44,13 +44,13 @@ async def reconcile_worker_resources(current_cfg, limit_manager, rabbit, channel
         # Determine if we need to (re)initialize RabbitMQ
         needs_init = False
         if new_cfg != current_cfg:
-            logger.info("⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...")
+            logger.info("Configuration updated from Redis. (Re)initializing RabbitMQ...")
             needs_init = True
         elif rabbit is None or channel is None or queue is None:
-            logger.info("⚙️ RabbitMQ resources are missing or stale. Initializing...")
+            logger.info("RabbitMQ resources are missing or stale. Initializing...")
             needs_init = True
         elif rabbit.connection.is_closed:
-            logger.info("⚙️ RabbitMQ connection is closed. Reconnecting...")
+            logger.info("RabbitMQ connection is closed. Reconnecting...")
             needs_init = True
 
         if needs_init:
@@ -71,12 +71,12 @@ async def reconcile_worker_resources(current_cfg, limit_manager, rabbit, channel
         # If config hasn't changed and connection is healthy, verify Redis
         redis_mgr = await AsyncRedisSingleton.get_instance(**REDIS_CFG)
         if not await redis_mgr.ping():
-            logger.warning("⚠️ Redis connection lost. Triggering re-init...")
+            logger.warning("Redis connection lost. Triggering re-init...")
             return None, None, None, None # Force re-init next iteration
             
         return current_cfg, rabbit, channel, queue
 
     except Exception as e:
-        logger.error(f"⚠️ Resource reconciliation error: {e}. Retrying in 10s...")
+        logger.error(f"Resource reconciliation error: {e}. Retrying in 10s...")
         await asyncio.sleep(10)
         return None, None, None, None # Force re-init

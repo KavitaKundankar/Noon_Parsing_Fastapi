@@ -18,16 +18,13 @@ async def lifespan(app: FastAPI):
     # Shutdown: Clean up all connections
     worker_task.cancel()
     
-    # Close RabbitMQ
-    # (Since we don't have RABBIT_CFG here easily, 
-    # we rely on the singleton's existing connection)
     if AsyncRabbitMQSingleton._instance:
         await AsyncRabbitMQSingleton._instance.close()
     
     # Close Redis
     await redis_mgr.close()
     
-    logger.info("👋 Microservice shutdown complete.")
+    logger.info("Microservice shutdown complete.")
 
 app = FastAPI(title="Redis-Configured RabbitMQ Microservice", lifespan=lifespan)
 
