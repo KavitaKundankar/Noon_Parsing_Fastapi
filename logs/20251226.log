@@ -1,0 +1,67 @@
+2025-12-26 11:24:59,223 | INFO | noon_report_worker | logger_config.py:30 | *** Logging system initialized ***
+2025-12-26 11:24:59,685 | INFO | noon_report_worker | worker.py:21 | 🚀 Starting RabbitMQ Worker (Clean Refactored Mode)...
+2025-12-26 11:24:59,688 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:25:19,711 | INFO | noon_report_worker | worker.py:53 | 📩 Processing message (length: 1277)...
+2025-12-26 11:25:19,714 | ERROR | noon_report_worker | worker.py:116 | ❌ Worker loop error: module 'psycopg2' has no attribute 'pool'
+2025-12-26 11:25:29,717 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:25:29,725 | INFO | noon_report_worker | worker.py:53 | 📩 Processing message (length: 1277)...
+2025-12-26 11:25:29,740 | ERROR | noon_report_worker | worker.py:116 | ❌ Worker loop error: module 'psycopg2' has no attribute 'pool'
+2025-12-26 11:25:39,742 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:25:39,748 | INFO | noon_report_worker | worker.py:53 | 📩 Processing message (length: 1277)...
+2025-12-26 11:25:39,749 | ERROR | noon_report_worker | worker.py:116 | ❌ Worker loop error: module 'psycopg2' has no attribute 'pool'
+2025-12-26 11:25:49,752 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:25:49,761 | INFO | noon_report_worker | worker.py:53 | 📩 Processing message (length: 1277)...
+2025-12-26 11:25:49,761 | ERROR | noon_report_worker | worker.py:116 | ❌ Worker loop error: module 'psycopg2' has no attribute 'pool'
+2025-12-26 11:25:57,493 | INFO | noon_report_worker | main.py:30 | 👋 Microservice shutdown complete.
+2025-12-26 11:27:12,228 | INFO | noon_report_worker | logger_config.py:30 | *** Logging system initialized ***
+2025-12-26 11:27:12,662 | INFO | noon_report_worker | worker.py:21 | 🚀 Starting RabbitMQ Worker (Clean Refactored Mode)...
+2025-12-26 11:27:12,663 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:27:12,670 | INFO | noon_report_worker | worker.py:53 | 📩 Processing message (length: 1277)...
+2025-12-26 11:27:12,671 | ERROR | noon_report_worker | worker.py:116 | ❌ Worker loop error: module 'psycopg2' has no attribute 'pool'
+2025-12-26 11:27:22,672 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:27:22,678 | INFO | noon_report_worker | worker.py:53 | 📩 Processing message (length: 1277)...
+2025-12-26 11:27:22,679 | ERROR | noon_report_worker | worker.py:116 | ❌ Worker loop error: module 'psycopg2' has no attribute 'pool'
+2025-12-26 11:27:25,810 | INFO | noon_report_worker | main.py:30 | 👋 Microservice shutdown complete.
+2025-12-26 11:29:24,108 | INFO | noon_report_worker | logger_config.py:30 | *** Logging system initialized ***
+2025-12-26 11:29:24,558 | INFO | noon_report_worker | worker.py:20 | 🚀 Starting RabbitMQ Worker (Clean Refactored Mode)...
+2025-12-26 11:29:24,560 | INFO | noon_report_worker | load_redis_config.py:47 | ⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 11:29:24,566 | INFO | noon_report_worker | worker.py:52 | 📩 Processing message (length: 1277)...
+2025-12-26 11:29:24,578 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 11:29:24,579 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 11:29:24,587 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 11:29:24,588 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 11:29:29,854 | INFO | noon_report_worker | parser_mailbody.py:47 | Token usage: prompt_token_count: 1499
+candidates_token_count: 1204
+total_token_count: 2703
+
+2025-12-26 11:29:29,855 | INFO | noon_report_worker | mapping_loader.py:18 | Standard keys fetched for tenant: orion
+2025-12-26 11:29:29,883 | INFO | noon_report_worker | save_unmapped.py:22 | Merged unmapped keys for tenant: orion
+2025-12-26 11:29:29,884 | ERROR | noon_report_worker | mapping_mailbody.py:34 | Saved Unmapped keys for tenant orion : {}
+2025-12-26 11:29:29,884 | INFO | noon_report_worker | mapping_mailbody.py:39 | Mapping done for tenant : 'orion',  IMO : '9238595' vessel : 'RIZHAO EXPRESS'
+2025-12-26 11:29:29,891 | INFO | noon_report_worker | vessel_id.py:14 | Searching ID in DB
+2025-12-26 11:29:29,892 | INFO | noon_report_worker | vessel_id.py:30 | Matched IMO: 9238595, vessel_id : (21,)
+2025-12-26 11:29:29,917 | INFO | noon_report_worker | mapping_db_saver.py:47 | Inserted noon_parsing_report ID: 288
+2025-12-26 11:29:29,917 | INFO | noon_report_worker | worker.py:101 | ✅ Report saved successfully. ID: 288
+2025-12-26 11:29:30,918 | INFO | noon_report_worker | worker.py:105 | ✅ Message ACKed.
+2025-12-26 11:29:30,918 | INFO | noon_report_worker | daily_limit.py:40 | 📊 Progress: 1/4
+2025-12-26 11:29:40,927 | INFO | noon_report_worker | worker.py:52 | 📩 Processing message (length: 1277)...
+2025-12-26 11:29:40,927 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 11:29:40,928 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 11:29:40,941 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 11:29:40,941 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 11:29:45,450 | INFO | noon_report_worker | parser_mailbody.py:47 | Token usage: prompt_token_count: 1499
+candidates_token_count: 1204
+total_token_count: 2703
+
+2025-12-26 11:29:45,451 | INFO | noon_report_worker | mapping_loader.py:18 | Standard keys fetched for tenant: orion
+2025-12-26 11:29:45,481 | INFO | noon_report_worker | save_unmapped.py:22 | Merged unmapped keys for tenant: orion
+2025-12-26 11:29:45,481 | ERROR | noon_report_worker | mapping_mailbody.py:34 | Saved Unmapped keys for tenant orion : {}
+2025-12-26 11:29:45,481 | INFO | noon_report_worker | mapping_mailbody.py:39 | Mapping done for tenant : 'orion',  IMO : '9238595' vessel : 'RIZHAO EXPRESS'
+2025-12-26 11:29:45,481 | INFO | noon_report_worker | vessel_id.py:14 | Searching ID in DB
+2025-12-26 11:29:45,482 | INFO | noon_report_worker | vessel_id.py:30 | Matched IMO: 9238595, vessel_id : (21,)
+2025-12-26 11:29:45,513 | INFO | noon_report_worker | mapping_db_saver.py:47 | Inserted noon_parsing_report ID: 289
+2025-12-26 11:29:45,513 | INFO | noon_report_worker | worker.py:101 | ✅ Report saved successfully. ID: 289
+2025-12-26 11:29:46,515 | INFO | noon_report_worker | worker.py:105 | ✅ Message ACKed.
+2025-12-26 11:29:46,515 | INFO | noon_report_worker | daily_limit.py:40 | 📊 Progress: 2/4
+2025-12-26 11:31:07,632 | INFO | noon_report_worker | worker.py:112 | 🛑 Worker task cancelled.
+2025-12-26 11:31:07,634 | INFO | noon_report_worker | main.py:30 | 👋 Microservice shutdown complete.

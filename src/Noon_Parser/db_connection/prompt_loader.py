@@ -1,6 +1,5 @@
 from .db_connect_pool import Database
-from ..vessel_info.vessel_info import extract_vessel_metadata
-from ..logger_config import logger
+from logger_config import logger
 
 
 def get_tenant_prompt(tenant, imo):

@@ -5,6 +5,7 @@ from src.worker import rabbit_worker, limit_manager
 from src.singleton import AsyncRabbitMQSingleton
 from src.redis_singleton import AsyncRedisSingleton
 from config import REDIS_CFG
+from logger_config import logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -26,7 +27,7 @@ async def lifespan(app: FastAPI):
     # Close Redis
     await redis_mgr.close()
     
-    print("👋 Microservice shutdown complete.")
+    logger.info("👋 Microservice shutdown complete.")
 
 app = FastAPI(title="Redis-Configured RabbitMQ Microservice", lifespan=lifespan)
 

@@ -1,6 +1,6 @@
 import os
 import psycopg2
-from psycopg2 import pool
+import psycopg2.pool
 
 class Database:
     _instances = {}  # <-- FIXED (dict instead of None)

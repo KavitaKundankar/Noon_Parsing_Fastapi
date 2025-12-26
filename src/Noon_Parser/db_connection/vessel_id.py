@@ -1,4 +1,4 @@
-from ..logger_config import logger
+from logger_config import logger
 from .db_connect_pool import Database
 
 

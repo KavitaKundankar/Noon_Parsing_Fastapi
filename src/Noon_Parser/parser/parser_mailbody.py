@@ -1,9 +1,7 @@
 import google.generativeai as genai
 import json, re
 import os
-from datetime import datetime
-from ..logger_config import logger
-from ..config import BASE_DIR
+from logger_config import logger
 from ..db_connection.prompt_loader import get_tenant_prompt
 import json
 from dotenv import load_dotenv

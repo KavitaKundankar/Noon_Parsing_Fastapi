@@ -1,9 +1,4 @@
-import json
-import re
-import os
-from datetime import datetime
-from ..logger_config import logger
-from ..config import BASE_DIR
+from logger_config import logger
 from ..db_connection.mapping_loader import get_standard_keys
 from ..db_connection.save_unmapped import merge_unmapped_keys
 
@@ -48,28 +43,3 @@ class NoonReportMapper:
         except Exception as e:
             logger.error(f"Error in mapping. No mapping was saved for tenant : '{tenant}', IMO : '{imo}', vessel : '{name}' : {e}")
             return {}
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# path = os.path.join(BASE_DIR, "mapping","json_mappings", f"{tenant}_mapping.json")
-
-# if not os.path.exists(path):
-#     logger.error(f"Mapping file not found for tenant: {tenant}")
-#     return {}
-
-# with open(path, "r") as f:
-#     standard_data = json.load(f)

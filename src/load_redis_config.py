@@ -1,10 +1,12 @@
 import asyncio
 import json
-from .redis_singleton import AsyncRedisSingleton
-from .singleton import AsyncRabbitMQSingleton
 from config import REDIS_CFG
 import config as default_config
+from .redis_singleton import AsyncRedisSingleton
+from .singleton import AsyncRabbitMQSingleton
 
+
+from logger_config import logger
 
 async def load_config_from_redis():
     """Fetch configuration from Redis keys."""
@@ -42,13 +44,13 @@ async def reconcile_worker_resources(current_cfg, limit_manager, rabbit, channel
         # Determine if we need to (re)initialize RabbitMQ
         needs_init = False
         if new_cfg != current_cfg:
-            print("⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...")
+            logger.info("⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...")
             needs_init = True
         elif rabbit is None or channel is None or queue is None:
-            print("⚙️ RabbitMQ resources are missing or stale. Initializing...")
+            logger.info("⚙️ RabbitMQ resources are missing or stale. Initializing...")
             needs_init = True
         elif rabbit.connection.is_closed:
-            print("⚙️ RabbitMQ connection is closed. Reconnecting...")
+            logger.info("⚙️ RabbitMQ connection is closed. Reconnecting...")
             needs_init = True
 
         if needs_init:
@@ -69,12 +71,12 @@ async def reconcile_worker_resources(current_cfg, limit_manager, rabbit, channel
         # If config hasn't changed and connection is healthy, verify Redis
         redis_mgr = await AsyncRedisSingleton.get_instance(**REDIS_CFG)
         if not await redis_mgr.ping():
-            print("⚠️ Redis connection lost. Triggering re-init...")
+            logger.warning("⚠️ Redis connection lost. Triggering re-init...")
             return None, None, None, None # Force re-init next iteration
             
         return current_cfg, rabbit, channel, queue
 
     except Exception as e:
-        print(f"⚠️ Resource reconciliation error: {e}. Retrying in 10s...")
+        logger.error(f"⚠️ Resource reconciliation error: {e}. Retrying in 10s...")
         await asyncio.sleep(10)
         return None, None, None, None # Force re-init

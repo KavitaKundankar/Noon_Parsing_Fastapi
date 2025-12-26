@@ -1,6 +1,5 @@
 from .db_connect_pool import Database
-from ..vessel_info.vessel_info import extract_vessel_metadata
-from ..logger_config import logger
+from logger_config import logger
 
 
 def get_standard_keys(tenant):
@@ -15,6 +14,8 @@ def get_standard_keys(tenant):
         WHERE tenant = %s
         LIMIT 1;
     """, (tenant,))
+    
+    logger.info(f"Standard keys fetched for tenant: {tenant}")
     
     standard_keys_row = cur.fetchone()
     standard_keys = standard_keys_row[0] if standard_keys_row else "{}"

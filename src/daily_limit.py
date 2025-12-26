@@ -1,8 +1,6 @@
 import asyncio
 from datetime import datetime, timedelta
-
-import asyncio
-from datetime import datetime, timedelta
+from logger_config import logger
 
 class DailyLimitManager:
     def __init__(self, limit: int):
@@ -19,14 +17,13 @@ class DailyLimitManager:
         return target
 
     async def check_and_wait(self):
-  
         now = datetime.now()
 
         # If limit reached → sleep until next 1 AM
         if self.count >= self.limit:
             if not self.reset_time:
                 self.reset_time = self._get_next_reset_time()
-                print(f"🛑 Daily limit of {self.limit} reached. Waiting until {self.reset_time}")
+                logger.info(f"🛑 Daily limit of {self.limit} reached. Waiting until {self.reset_time}")
 
             wait_seconds = (self.reset_time - now).total_seconds()
 
@@ -36,8 +33,8 @@ class DailyLimitManager:
             # Reset after the sleep period
             self.count = 0
             self.reset_time = None
-            print("✅ Daily reset period over. Counter cleared.")
+            logger.info("✅ Daily reset period over. Counter cleared.")
 
     def increment(self):
         self.count += 1
-        print(f"📊 Progress: {self.count}/{self.limit}")
+        logger.info(f"📊 Progress: {self.count}/{self.limit}")

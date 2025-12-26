@@ -1,4 +1,4 @@
-from ..logger_config import logger
+from logger_config import logger
 
 def build_noon_parsing_payload(mapped, tenant, vessel_id, raw_mail_body, vessel_name, parsed):
 
