@@ -23,7 +23,7 @@ class DailyLimitManager:
         if self.count >= self.limit:
             if not self.reset_time:
                 self.reset_time = self._get_next_reset_time()
-                logger.info(f"🛑 Daily limit of {self.limit} reached. Waiting until {self.reset_time}")
+                logger.info(f"Daily limit of {self.limit} reached. Waiting until {self.reset_time}")
 
             wait_seconds = (self.reset_time - now).total_seconds()
 
@@ -33,8 +33,8 @@ class DailyLimitManager:
             # Reset after the sleep period
             self.count = 0
             self.reset_time = None
-            logger.info("✅ Daily reset period over. Counter cleared.")
+            logger.info("Daily reset period over. Counter cleared.")
 
     def increment(self):
         self.count += 1
-        logger.info(f"📊 Progress: {self.count}/{self.limit}")
+        logger.info(f"Progress: {self.count}/{self.limit}")

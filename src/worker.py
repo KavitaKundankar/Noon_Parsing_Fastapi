@@ -17,7 +17,7 @@ limit_manager = DailyLimitManager(limit=default_config.DAILY_LIMIT)
 
 async def rabbit_worker():
     """Background task that consumes messages from RabbitMQ."""
-    logger.info("🚀 Starting RabbitMQ Worker (Clean Refactored Mode)...")
+    logger.info("Starting RabbitMQ Worker (Clean Refactored Mode)...")
     
     # Initialize Parser and Mapper
     api_key = os.getenv("GEMINI_API_KEY")

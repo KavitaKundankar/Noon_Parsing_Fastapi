@@ -26,7 +26,7 @@ async def lifespan(app: FastAPI):
     
     logger.info("Microservice shutdown complete.")
 
-app = FastAPI(title="Redis-Configured RabbitMQ Microservice", lifespan=lifespan)
+app = FastAPI(title="Noon Parser Microservice", lifespan=lifespan)
 
 @app.get("/status")
 async def get_status():
