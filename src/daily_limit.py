@@ -1,67 +1,42 @@
-# import asyncio
-# from datetime import datetime, timedelta
-
-# class DailyLimitManager:
-#     def __init__(self, limit: int):
-#         self.limit = limit
-#         self.count = 0
-#         self.reset_time = self._get_next_reset_time()
-
-#     def _get_next_reset_time(self):
-#         now = datetime.now()
-#         return now.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
-
-#     async def check_and_wait(self):
-#         now = datetime.now()
-#         if now >= self.reset_time:
-#             self.count = 0
-#             # self.reset_time = self._get_next_reset_time()
-#             self.reset_time = now.replace(hour=0, minute=5, second=0, microsecond=0)
-
-#         if self.count >= self.limit:
-#             wait_seconds = (self.reset_time - now).total_seconds()
-#             print(f"🛑 Daily limit of {self.limit} reached. Waiting for next day...")
-#             await asyncio.sleep(wait_seconds)
-#             self.count = 0
-#             self.reset_time = self._get_next_reset_time()
-
-#     def increment(self):
-#         self.count += 1
-#         print(f"📊 Progress: {self.count}/{self.limit}")
-
+import asyncio
+from datetime import datetime, timedelta
 
 import asyncio
 from datetime import datetime, timedelta
 
-
 class DailyLimitManager:
-    def __init__(self, limit: int, cooldown_minutes: int = 5):
+    def __init__(self, limit: int):
         self.limit = limit
-        self.cooldown = timedelta(minutes=cooldown_minutes)
         self.count = 0
         self.reset_time = None
 
+    def _get_next_reset_time(self):
+        """Calculate the next 1 AM reset time."""
+        now = datetime.now()
+        target = now.replace(hour=1, minute=0, second=0, microsecond=0)
+        if target <= now:
+            target += timedelta(days=1)
+        return target
+
     async def check_and_wait(self):
+  
         now = datetime.now()
 
-        # If limit reached → start cooldown
+        # If limit reached → sleep until next 1 AM
         if self.count >= self.limit:
             if not self.reset_time:
-                self.reset_time = now + self.cooldown
-                print(
-                    f" Limit {self.limit} reached. "
-                    f"Cooling down until {self.reset_time.strftime('%H:%M:%S')}"
-                )
+                self.reset_time = self._get_next_reset_time()
+                print(f"🛑 Daily limit of {self.limit} reached. Waiting until {self.reset_time}")
 
             wait_seconds = (self.reset_time - now).total_seconds()
 
             if wait_seconds > 0:
                 await asyncio.sleep(wait_seconds)
 
-            # Reset after cooldown
+            # Reset after the sleep period
             self.count = 0
             self.reset_time = None
-            print("✅ Cooldown over. Counter reset.")
+            print("✅ Daily reset period over. Counter cleared.")
 
     def increment(self):
         self.count += 1

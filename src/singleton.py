@@ -12,7 +12,14 @@ class AsyncRabbitMQSingleton:
     @classmethod
     async def get_instance(cls, cfg: dict) -> "AsyncRabbitMQSingleton":
         async with cls._lock:
-            if cls._instance is None:
+            if cls._instance is None or cls._instance.connection.is_closed:
+                # If instance exists but connection is closed, clear it
+                if cls._instance:
+                    try:
+                        await cls._instance.close()
+                    except:
+                        pass
+                
                 connection = await aio_pika.connect_robust(
                     host=cfg["host"],
                     port=cfg["port"],

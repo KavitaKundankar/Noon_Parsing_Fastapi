@@ -1,10 +1,5 @@
 import asyncio
 import json
-import sys
-import os
-
-# Ensure parent directory is in path if running directly, 
-# but for FastAPI 'import config' from root works.
 from .redis_singleton import AsyncRedisSingleton
 from .singleton import AsyncRabbitMQSingleton
 from config import REDIS_CFG
@@ -44,14 +39,26 @@ async def reconcile_worker_resources(current_cfg, limit_manager, rabbit, channel
     try:
         new_cfg = await load_config_from_redis()
         
-        # If config changed or it's the first run, (re)initialize RabbitMQ
+        # Determine if we need to (re)initialize RabbitMQ
+        needs_init = False
         if new_cfg != current_cfg:
             print("⚙️ Configuration updated from Redis. (Re)initializing RabbitMQ...")
+            needs_init = True
+        elif rabbit is None or channel is None or queue is None:
+            print("⚙️ RabbitMQ resources are missing or stale. Initializing...")
+            needs_init = True
+        elif rabbit.connection.is_closed:
+            print("⚙️ RabbitMQ connection is closed. Reconnecting...")
+            needs_init = True
+
+        if needs_init:
             limit_manager.limit = new_cfg["DAILY_LIMIT"]
             
-            # Close old connection if exists
             if rabbit:
-                await rabbit.close()
+                try:
+                    await rabbit.close()
+                except:
+                    pass
 
             rabbit = await AsyncRabbitMQSingleton.get_instance(new_cfg["RABBIT_CFG"])
             channel = await rabbit.get_channel()
@@ -59,7 +66,7 @@ async def reconcile_worker_resources(current_cfg, limit_manager, rabbit, channel
             queue = await channel.declare_queue(new_cfg["QUEUE_NAME"], durable=True)
             return new_cfg, rabbit, channel, queue
         
-        # If config hasn't changed, just verify Redis is still alive
+        # If config hasn't changed and connection is healthy, verify Redis
         redis_mgr = await AsyncRedisSingleton.get_instance(**REDIS_CFG)
         if not await redis_mgr.ping():
             print("⚠️ Redis connection lost. Triggering re-init...")
