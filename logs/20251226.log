@@ -214,3 +214,132 @@ total_token_count: 2763
 2025-12-26 14:31:51,134 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
 2025-12-26 14:31:51,269 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
 2025-12-26 14:31:56,190 | INFO | noon_report_worker | main.py:27 | Microservice shutdown complete.
+2025-12-26 14:33:44,014 | INFO | noon_report_worker | logger_config.py:30 | *** Logging system initialized ***
+2025-12-26 14:33:44,914 | INFO | noon_report_worker | worker.py:20 | Starting RabbitMQ Worker (Clean Refactored Mode)...
+2025-12-26 14:33:44,921 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:33:44,930 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:33:44,952 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:33:44,955 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:33:44,981 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:33:44,983 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:33:45,803 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:33:55,806 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:33:55,819 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:33:55,820 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:33:55,821 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:33:55,822 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:33:55,822 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:33:56,001 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:34:06,005 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:34:06,017 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:34:06,017 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:34:06,019 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:34:06,019 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:34:06,020 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:34:06,189 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:34:16,193 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:34:16,209 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:34:16,210 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:34:16,212 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:34:16,214 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:34:16,215 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:34:16,365 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:34:26,368 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:34:26,381 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:34:26,382 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:34:26,383 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:34:26,383 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:34:26,384 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:34:26,523 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:34:36,526 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:34:36,536 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:34:36,537 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:34:36,538 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:34:36,539 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:34:36,539 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:34:36,684 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:34:46,689 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:34:46,704 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:34:46,704 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:34:46,706 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:34:46,706 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:34:46,707 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:34:46,942 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:34:56,945 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:34:56,961 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:34:56,962 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:34:56,964 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:34:56,965 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:34:56,966 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:34:57,107 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:35:07,109 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:35:07,123 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:35:07,123 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:35:07,124 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:35:07,125 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:35:07,125 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:35:07,263 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:35:17,265 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:35:17,278 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:35:17,279 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:35:17,280 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:35:17,281 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:35:17,282 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:35:17,564 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:35:27,567 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:35:27,580 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:35:27,580 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:35:27,582 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:35:27,583 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:35:27,583 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:35:27,729 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:35:37,733 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:35:37,747 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:35:37,748 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:35:37,749 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:35:37,750 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:35:37,750 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:35:37,942 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:35:47,945 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:35:47,956 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:35:47,957 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:35:47,958 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:35:47,959 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:35:47,960 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:35:48,108 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:35:58,112 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:35:58,125 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:35:58,126 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:35:58,127 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:35:58,128 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:35:58,128 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:35:58,268 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:36:08,272 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:36:08,280 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:36:08,280 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:36:08,281 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:36:08,281 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:36:08,282 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:36:08,422 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:36:18,425 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:36:18,436 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:36:18,437 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:36:18,438 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:36:18,440 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:36:18,441 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:36:18,702 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:36:28,704 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:36:28,719 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:36:28,720 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:36:28,721 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:36:28,723 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:36:28,725 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:36:28,943 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:36:38,947 | INFO | noon_report_worker | load_redis_config.py:47 | Configuration updated from Redis. (Re)initializing RabbitMQ...
+2025-12-26 14:36:38,963 | INFO | noon_report_worker | worker.py:52 | Processing message (length: 1277)...
+2025-12-26 14:36:38,964 | INFO | noon_report_worker | imo_loader.py:31 | Searching Vessel Name in DB: RIZHAO EXPRESS
+2025-12-26 14:36:38,966 | INFO | noon_report_worker | imo_loader.py:47 | Matched IMO: 9238595, Vessel: RIZHAO EXPRESS
+2025-12-26 14:36:38,967 | INFO | noon_report_worker | prompt_loader.py:30 | Searching tenant in DB: orion
+2025-12-26 14:36:38,968 | INFO | noon_report_worker | prompt_loader.py:45 | Searching imo prompt in DB: 9238595
+2025-12-26 14:36:39,111 | ERROR | noon_report_worker | worker.py:115 | Worker loop error: 403 Your API key was reported as leaked. Please use another API key.
+2025-12-26 14:36:46,040 | INFO | noon_report_worker | main.py:27 | Microservice shutdown complete.
